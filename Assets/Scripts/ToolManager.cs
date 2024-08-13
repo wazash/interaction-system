@@ -11,7 +11,7 @@ public class ToolManager : MonoBehaviour
 
     public void SwitchTool(int index)
     {
-        CurrentToolIndex = Mathf.Clamp(index, 0, tools.Length - 1);
+        CurrentToolIndex = (index + tools.Length) % tools.Length;
         OnToolChanged?.Invoke(CurrentToolIndex);
 
         Debug.Log($"Switched to tool {tools[CurrentToolIndex].name}");
