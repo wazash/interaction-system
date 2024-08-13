@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6082fdcd67b92054995daa3c34b717b8, type: 3}
   m_Name: ColorEffect
   m_EditorClassIdentifier: 
-  color: {r: 0.51174796, g: 0.8679245, b: 0.51174796, a: 1}
+  color: {r: 0.20087217, g: 0.6981132, b: 0.20087217, a: 1}
+  randomColor: 1
