@@ -123,6 +123,8 @@ MonoBehaviour:
   - {fileID: 569463707623627137}
   - {fileID: 2230709695643707677}
   toolManager: {fileID: 0}
+  slotObject: {fileID: 7770691740257802556, guid: 5c92c1baa3d133f4e8a22294fb5067e9,
+    type: 3}
 --- !u!1001 &910099549563037267
 PrefabInstance:
   m_ObjectHideFlags: 0

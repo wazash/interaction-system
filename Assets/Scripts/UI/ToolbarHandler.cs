@@ -1,14 +1,16 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ToolbarHandler : MonoBehaviour
 {
-    [SerializeField] private Slot[] slots;
+    [SerializeField] private List<Slot> slots;
     [SerializeField] private ToolManager toolManager;
+
+    [SerializeField] private GameObject slotObject;
 
     private void Start()
     {
         PopulateToolbar();
-
         HandleToolChanged(toolManager.CurrentToolIndex);
 
         toolManager.OnToolChanged += HandleToolChanged;
@@ -21,14 +23,26 @@ public class ToolbarHandler : MonoBehaviour
 
     public void PopulateToolbar()
     {
+        ClearToolbar();
+
+        InstantiateSlots();
+    }
+
+    private void ClearToolbar()
+    {
         foreach (var slot in slots)
         {
-            slot.ClearSlot();
+            Destroy(slot.gameObject);
         }
+    }
 
-        for (int i = 0; i < slots.Length; i++)
+    private void InstantiateSlots()
+    {
+        for (int i = 0; i < toolManager.GetTools().Length; i++)
         {
-            slots[i].SetSlot(toolManager.GetTool(i).effect.Key);
+            var slot = Instantiate(slotObject, transform).GetComponent<Slot>();
+            slot.SetSlot(toolManager.GetTool(i).effect.Key);
+            slots.Add(slot);
         }
     }
 

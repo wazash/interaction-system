@@ -26,4 +26,9 @@ public class ToolManager : MonoBehaviour
     {
         return tools[index];
     }
+
+    public Tool[] GetTools()
+    {
+        return tools;
+    }
 }

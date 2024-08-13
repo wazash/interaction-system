@@ -1419,6 +1419,11 @@ PrefabInstance:
       propertyPath: toolManager
       value: 
       objectReference: {fileID: 2028662099}
+    - target: {fileID: 3475144887561064887, guid: 31e031fb9f5085d44b7e756d88921497,
+        type: 3}
+      propertyPath: slots.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3871212729937408573, guid: 31e031fb9f5085d44b7e756d88921497,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1485,7 +1490,10 @@ PrefabInstance:
       value: Toolbar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7455243266885320559, guid: 31e031fb9f5085d44b7e756d88921497, type: 3}
+    - {fileID: 9107526253802196979, guid: 31e031fb9f5085d44b7e756d88921497, type: 3}
+    - {fileID: 2040216436563968527, guid: 31e031fb9f5085d44b7e756d88921497, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31e031fb9f5085d44b7e756d88921497, type: 3}
