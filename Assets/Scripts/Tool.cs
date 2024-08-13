@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Tool", menuName = "Tool")]
 public class Tool : ScriptableObject
 {
-    public List<EffectSO> effects = new();
+    public EffectSO effect;
 
     public void Use(GameObject target)
     {
@@ -18,10 +18,7 @@ public class Tool : ScriptableObject
             return;
         }
 
-        foreach (var effect in effects)
-        {
-            effect.ApplyEffect(target);
-        }
+        effect.ApplyEffect(target);
 
         Debug.Log($"Used {name} on {target.name}");
     }

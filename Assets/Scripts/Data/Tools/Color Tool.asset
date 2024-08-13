@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8c85d2fd0c9e04f81d5438de964754, type: 3}
   m_Name: Color Tool
   m_EditorClassIdentifier: 
-  effects:
-  - {fileID: 11400000, guid: a59e775a160563042976c1ee2df3eb34, type: 2}
+  effect: {fileID: 11400000, guid: a59e775a160563042976c1ee2df3eb34, type: 2}
