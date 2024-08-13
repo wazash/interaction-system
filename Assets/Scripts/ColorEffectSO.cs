@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 
 [CreateAssetMenu(fileName = "ColorEffect", menuName = "Effects/ColorEffect")]
 public class ColorEffectSO : EffectSO
@@ -11,9 +12,13 @@ public class ColorEffectSO : EffectSO
         if (target.TryGetComponent<Renderer>(out var renderer))
         {
             if (randomColor)
-                renderer.material.color = Random.ColorHSV();
+            {
+                Color random = Random.ColorHSV();
+                renderer.material.DOColor(random, 1f).SetEase(Ease.Linear);
+
+            }
             else
-                renderer.material.color = color;
+                renderer.material.DOColor(color, 1f).SetEase(Ease.Linear);
         }
     }
 }

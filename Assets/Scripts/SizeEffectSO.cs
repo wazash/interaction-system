@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 
 [CreateAssetMenu(fileName = "SizeEffect", menuName = "Effects/SizeEffect")]
 public class SizeEffectSO : EffectSO
@@ -7,6 +8,6 @@ public class SizeEffectSO : EffectSO
 
     public override void ApplyEffect(GameObject target)
     {
-        target.transform.localScale += sizeChange;
+        target.transform.DOScale(target.transform.localScale + sizeChange, 1f).SetEase(Ease.InElastic);
     }
 }
