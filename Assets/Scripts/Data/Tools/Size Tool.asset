@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8c85d2fd0c9e04f81d5438de964754, type: 3}
   m_Name: Size Tool
   m_EditorClassIdentifier: 
-  effect: {fileID: 11400000, guid: d2eed354f4d6d7941b2096b29746a865, type: 2}
+  SlotKey: S
+  effects:
+  - {fileID: 11400000, guid: d2eed354f4d6d7941b2096b29746a865, type: 2}

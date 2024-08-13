@@ -1,9 +1,10 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ToolManager : MonoBehaviour
 {
-    [SerializeField] private Tool[] tools;
+    [SerializeField] private List<Tool> tools;
 
     public int CurrentToolIndex { get; private set; } = 0;
 
@@ -11,7 +12,7 @@ public class ToolManager : MonoBehaviour
 
     public void SwitchTool(int index)
     {
-        CurrentToolIndex = (index + tools.Length) % tools.Length;
+        CurrentToolIndex = (index + tools.Count) % tools.Count;
         OnToolChanged?.Invoke(CurrentToolIndex);
 
         Debug.Log($"Switched to tool {tools[CurrentToolIndex].name}");
@@ -27,7 +28,7 @@ public class ToolManager : MonoBehaviour
         return tools[index];
     }
 
-    public Tool[] GetTools()
+    public List<Tool> GetTools()
     {
         return tools;
     }

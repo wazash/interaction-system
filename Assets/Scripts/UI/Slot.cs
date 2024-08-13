@@ -13,9 +13,9 @@ public class Slot : MonoBehaviour
         text.color = defaultColor;
     }
 
-    public void SetSlot(char key)
+    public void SetSlot(string key)
     {
-        text.text = key.ToString();
+        text.text = key;
         text.color = defaultColor;
     }
 

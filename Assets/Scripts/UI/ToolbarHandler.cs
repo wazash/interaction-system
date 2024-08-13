@@ -38,10 +38,10 @@ public class ToolbarHandler : MonoBehaviour
 
     private void InstantiateSlots()
     {
-        for (int i = 0; i < toolManager.GetTools().Length; i++)
+        for (int i = 0; i < toolManager.GetTools().Count; i++)
         {
             var slot = Instantiate(slotObject, transform).GetComponent<Slot>();
-            slot.SetSlot(toolManager.GetTool(i).effect.Key);
+            slot.SetSlot(toolManager.GetTool(i).SlotKey);
             slots.Add(slot);
         }
     }

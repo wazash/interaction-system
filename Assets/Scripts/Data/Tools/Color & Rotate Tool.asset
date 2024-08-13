@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f8c85d2fd0c9e04f81d5438de964754, type: 3}
-  m_Name: Color Tool
+  m_Name: Color & Rotate Tool
   m_EditorClassIdentifier: 
-  SlotKey: C
+  SlotKey: C&R
   effects:
   - {fileID: 11400000, guid: a59e775a160563042976c1ee2df3eb34, type: 2}
+  - {fileID: 11400000, guid: 7738f69401b8b1f47a57c161786a3fb5, type: 2}
