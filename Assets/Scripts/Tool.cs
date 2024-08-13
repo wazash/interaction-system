@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class Tool : MonoBehaviour
+[CreateAssetMenu(fileName = "Tool", menuName = "Tool")]
+public class Tool : ScriptableObject
 {
     public List<EffectSO> effects = new();
 
@@ -22,6 +23,6 @@ public class Tool : MonoBehaviour
             effect.ApplyEffect(target);
         }
 
-        Debug.Log($"Used {this.gameObject.name} on {target.name}");
+        Debug.Log($"Used {name} on {target.name}");
     }
 }

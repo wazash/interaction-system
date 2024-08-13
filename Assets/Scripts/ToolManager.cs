@@ -10,7 +10,7 @@ public class ToolManager : MonoBehaviour
     {
         CurrentToolIndex = Mathf.Clamp(index, 0, tools.Length - 1);
 
-        Debug.Log($"Switched to tool {CurrentToolIndex}");
+        Debug.Log($"Switched to tool {tools[CurrentToolIndex].name}");
     }
 
     public void UseTool(GameObject target)
